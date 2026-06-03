@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marketly — Premium Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-inner">
+      <a href="#" class="nav-logo" id="logoLink">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Marketly
+      </a>
+
+      <div class="nav-search-wrap">
+        <input type="text" id="searchInput" class="nav-search" placeholder="Search for products..." />
+        <svg class="nav-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </div>
+
+      <div class="nav-actions">
+        <a href="#" class="nav-link" id="shopNavLink">Shop</a>
+        <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+          <span class="cart-badge" id="cartBadge">0</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#" id="mobileShopLink">Shop</a>
+      <a href="#" id="mobileHomeLink">Home</a>
+    </div>
+  </header>
+
+  <!-- ===== PAGES ===== -->
+  <main id="appRoot">
+
+    <!-- PAGE: HOME -->
+    <div id="page-home" class="page">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-blob hero-blob-right"></div>
+        <div class="hero-blob hero-blob-left"></div>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <h1>Elevate Your <span class="accent">Lifestyle</span> with Premium Gear</h1>
+            <p>Discover a curated collection of high-quality products designed to enhance your every day. From tech essentials to timeless accessories.</p>
+            <div class="hero-cta">
+              <button class="btn btn-primary" id="heroShopBtn">Shop Now <span class="btn-arrow">→</span></button>
+              <button class="btn btn-ghost">Learn More</button>
+            </div>
+          </div>
+          <div class="hero-image-wrap">
+            <!--
+              Replace the src below with your own image.
+              Recommended size: 800×600px
+            -->
+            <img
+              src="images/hero.jpg"
+              alt="Shopping"
+              class="hero-img"
+              onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+            />
+            <div class="hero-img-placeholder" style="display:none">
+              <span>🛍️</span>
+              <small>Add your hero image at<br><code>images/hero.jpg</code></small>
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-icon">🛒</span>
+              <div>
+                <strong>Top Rated</strong>
+                <small>Join 10k+ Happy Customers</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <div class="container features-grid">
+          <div class="feature-card feature-indigo">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+            </div>
+            <h3>Fast Shipping</h3>
+            <p>Get your favorite products delivered to your door in record time.</p>
+          </div>
+          <div class="feature-card feature-purple">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <h3>Secure Payment</h3>
+            <p>Shop with confidence using our encrypted and secure payment gateways.</p>
+          </div>
+          <div class="feature-card feature-blue">
+            <div class="feature-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <h3>Premium Quality</h3>
+            <p>Every item in our store is hand-picked and tested for maximum quality.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Products -->
+      <section class="section-featured">
+        <div class="container">
+          <div class="section-header">
+            <div>
+              <h2>Featured Products</h2>
+              <p>Explore our most popular items this month.</p>
+            </div>
+            <button class="btn-link" id="viewAllBtn">View All →</button>
+          </div>
+          <div class="products-grid" id="featuredGrid"></div>
+        </div>
+      </section>
+
+    </div><!-- /page-home -->
+
+
+    <!-- PAGE: SHOP -->
+    <div id="page-shop" class="page hidden">
+      <div class="container shop-layout">
+
+        <!-- Sidebar -->
+        <aside class="shop-sidebar">
+          <h3 class="sidebar-title">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+            Categories
+          </h3>
+          <div class="category-list" id="categoryList"></div>
+
+          <div class="sidebar-promo">
+            <h4>Summer Sale!</h4>
+            <p>Get up to 50% off on selected electronics.</p>
+            <button class="btn btn-white">Explore Deals</button>
+          </div>
+        </aside>
+
+        <!-- Main content -->
+        <div class="shop-main">
+          <!-- Toolbar -->
+          <div class="shop-toolbar">
+            <p class="result-count">Showing <strong id="resultCount">0</strong> products</p>
+            <div class="toolbar-controls">
+              <div class="sort-wrap">
+                <span class="sort-label">Sort by:</span>
+                <select id="sortSelect" class="sort-select">
+                  <option value="featured">Featured</option>
+                  <option value="price-low">Price: Low to High</option>
+                  <option value="price-high">Price: High to Low</option>
+                  <option value="rating">Customer Rating</option>
+                </select>
+              </div>
+              <div class="view-toggle">
+                <button class="view-btn active" id="gridViewBtn" aria-label="Grid view">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                </button>
+                <button class="view-btn" id="listViewBtn" aria-label="List view">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Products -->
+          <div class="products-grid" id="shopGrid"></div>
+          <p class="no-results hidden" id="noResults">No products found in this category.</p>
+        </div>
+
+      </div>
+    </div><!-- /page-shop -->
+
+
+    <!-- PAGE: PRODUCT DETAIL -->
+    <div id="page-product" class="page hidden">
+      <div class="container">
+        <button class="back-btn" id="backBtn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          Back to Shop
+        </button>
+
+        <div class="product-detail-grid">
+          <!-- Images -->
+          <div class="product-images">
+            <div class="product-img-main">
+              <img id="pdMainImg" src="" alt="" />
+            </div>
+            <div class="product-thumbs" id="pdThumbs"></div>
+          </div>
+
+          <!-- Info -->
+          <div class="product-info">
+            <span class="product-category-tag" id="pdCategory"></span>
+            <h1 class="product-title" id="pdName"></h1>
+            <div class="product-rating-row">
+              <span class="stars">★</span>
+              <strong id="pdRating"></strong>
+              <span class="divider">|</span>
+              <span id="pdReviews" class="muted"></span>
+            </div>
+            <div class="product-price" id="pdPrice"></div>
+            <p class="product-desc" id="pdDesc"></p>
+
+            <div class="product-actions">
+              <div class="qty-control">
+                <button class="qty-btn" id="pdQtyMinus">−</button>
+                <span class="qty-val" id="pdQtyVal">1</span>
+                <button class="qty-btn" id="pdQtyPlus">+</button>
+              </div>
+              <button class="btn btn-primary btn-add-cart" id="pdAddCart">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                Add to Cart
+              </button>
+            </div>
+
+            <div class="product-perks">
+              <div class="perk">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                Free Shipping
+              </div>
+              <div class="perk">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                2 Year Warranty
+              </div>
+              <div class="perk">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+                30-Day Returns
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /page-product -->
+
+  </main><!-- /appRoot -->
+
+
+  <!-- ===== CART DRAWER ===== -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-head">
+      <h2>Shopping Cart</h2>
+      <button class="cart-close" id="cartClose" aria-label="Close cart">✕</button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot" id="cartFoot">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cartTotal">$0.00</strong>
+      </div>
+      <button class="btn btn-primary btn-checkout" id="checkoutBtn">Checkout Now</button>
+    </div>
+  </aside>
+
+
+  <!-- ===== TOAST ===== -->
+  <div class="toast" id="toast"></div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Marketly
+        </div>
+        <p>A curated marketplace for premium products. Quality you can trust, prices you'll love.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <a href="#">All Products</a>
+        <a href="#">Electronics</a>
+        <a href="#">Apparel</a>
+        <a href="#">Accessories</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Blog</a>
+      </div>
+      <div class="footer-col">
+        <h4>Help</h4>
+        <a href="#">Contact Us</a>
+        <a href="#">Shipping Info</a>
+        <a href="#">Returns</a>
+        <a href="#">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2025 Marketly. All rights reserved.</p>
+      <p>Built with ❤️ for great shopping experiences</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
