@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Cloud Ninjas</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+        Cloud Ninjas
+      </a>
+      <div class="nav-actions">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </header>
+
+  <!-- ===== PAGE HEADER ===== -->
+  <section class="page-banner">
+    <div class="hero-blob hero-blob-right"></div>
+    <div class="hero-blob hero-blob-left"></div>
+    <div class="container page-banner-inner">
+      <span class="page-tag">About Us</span>
+      <h1>Who We Are &amp; <span class="accent">What We Do</span></h1>
+      <p>Meet the Cloud Ninjas, a team of five students exploring the fundamentals of cloud computing, virtualisation, and modern deployment practices.</p>
+    </div>
+  </section>
+
+  <!-- ===== MISSION ===== -->
+  <section class="section-featured">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>Our Mission</h2>
+          <p>Why we built this project and what we hope to achieve.</p>
+        </div>
+      </div>
+      <div class="about-mission-grid">
+        <div class="mission-text">
+          <p>The Cloud Ninjas set out to understand the end-to-end lifecycle of a cloud-hosted application from writing code on a local machine, committing it to a version-control system, all the way to serving it to users anywhere in the world through a Content Delivery Network.</p>
+          <p style="margin-top:1rem">By building and deploying this site with GitHub Pages we are putting theory into practice: we have experienced first-hand how static assets can be hosted for free, scaled automatically, and delivered with low latency to users across the globe.</p>
+        </div>
+        <div class="mission-image-wrap">
+          <img
+            src="image2.png"
+            alt="Cloud architecture diagram"
+            class="hero-img"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+          />
+          <div class="hero-img-placeholder" style="display:none">
+            <span>🗺️</span>
+            <small>Add a diagram at<br><code>images/project-diagram.jpg</code></small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== VIRTUALISATION ===== -->
+  <section class="features" style="padding-top:0">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:2rem">
+        <div>
+          <h2>What Is Virtualisation?</h2>
+          <p>A core concept behind cloud computing.</p>
+        </div>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card feature-indigo">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><polyline points="8 21 12 17 16 21"/></svg>
+          </div>
+          <h3>Virtual Machines</h3>
+          <p>A VM emulates a complete computer system in software, allowing multiple isolated operating systems to share the same physical hardware.</p>
+        </div>
+        <div class="feature-card feature-purple">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+          </div>
+          <h3>Containers</h3>
+          <p>Containers package an application and its dependencies together, enabling consistent execution across different environments lightweight and fast.</p>
+        </div>
+        <div class="feature-card feature-blue">
+          <div class="feature-icon">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+          </div>
+          <h3>Cloud Providers</h3>
+          <p>AWS, Azure, and GCP use virtualisation at massive scale to offer Infrastructure-as-a-Service, letting anyone rent compute on demand.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TEAM CARDS ===== -->
+  <section class="section-featured" style="padding-top:0">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2>The Team</h2>
+          <p>Four students, one mission.</p>
+        </div>
+      </div>
+      <div class="team-grid">
+
+        <div class="team-card">
+          <div class="team-avatar">SAA</div>
+          <h3>Samuel Amo Adjei</h3>
+          <span class="team-role">Project Lead</span>
+          <p>Coordinates deliverables, manages the GitHub repository, and leads the deployment pipeline.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" style="background:var(--purple-light);color:var(--purple)">GBA</div>
+          <h3>Godwin Boateng Agyapong</h3>
+          <span class="team-role">Frontend Developer</span>
+          <p>Responsible for the HTML structure, CSS styling, and responsive layout of all three pages.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" style="background:var(--blue-light);color:var(--blue)">BKB</div>
+          <h3>Bismark Kyei Boateng</h3>
+          <span class="team-role">Research &amp; Content</span>
+          <p>Authors the written content on virtualisation, cloud concepts, and the project description.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" style="background:#fef3c7;color:#d97706">EO</div>
+          <h3>Elizabeth Ocansey</h3>
+          <span class="team-role">QA &amp; Testing</span>
+          <p>Validates cross-browser compatibility, accessibility, and reviews the final site before submission.</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-avatar" style="background:#fef3c7;color:#d97706">EA</div>
+          <h3>Eugene Aidoo</h3>
+          <span class="team-role">QA &amp; Testing</span>
+          <p>Validates cross-browser compatibility, accessibility, and reviews the final site before submission.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo" style="color:#fff">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9z"/></svg>
+          Cloud Ninjas
+        </div>
+        <p>A student group project for Cloud Computing Practical Lab 1. Built with HTML, CSS &amp; JS. Hosted on GitHub Pages.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Course</h4>
+        <a href="#">Cloud Computing</a>
+        <a href="#">Practical Lab 1</a>
+        <a href="#">GitHub Pages</a>
+      </div>
+      <div class="footer-col">
+        <h4>Team</h4>
+        <a href="#">Samuel Amo Adjei</a>
+        <a href="#">Godwin Boateng Agyapong</a>
+        <a href="#">Bismark Kyei Boateng</a>
+        <a href="#">Elizabeth Ocansey</a>
+        <a href="#">Eugene Aidoo</a>
+      </div>
+    </div>
+    <div class="footer-bottom container">
+      <p>© 2026 Cloud Ninjas. All rights reserved.</p>
+      <p>Built with ❤️ for Cloud Computing Practical Lab 1</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
